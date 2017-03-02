@@ -1,4 +1,4 @@
-@import '~/flexboxgrid/dist/flexboxgrid.css';
+@import '../node_modules/flexboxgrid/dist/flexboxgrid.css';
 
 html {
   font-family: 'Roboto', sans-serif;
