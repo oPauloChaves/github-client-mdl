@@ -40,4 +40,4 @@ yarn run build
 - [Service Worker Precache](https://github.com/GoogleChrome/sw-precache)
 - [SoundRedux](https://github.com/andrewngu/sound-redux)
 - [react-redux-starter-kit](https://github.com/cloudmu/react-redux-starter-kit)
-- [Material Design CSS Framework](https://github.com/muicss/mui)
+- [Material-UI](https://github.com/callemall/material-ui)
