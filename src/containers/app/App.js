@@ -1,28 +1,53 @@
-import React, { Component } from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-import Dialog from 'material-ui/Dialog';
-import {deepPurple500} from 'material-ui/styles/colors';
-import FlatButton from 'material-ui/FlatButton';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import React, { Component } from 'react'
+// import RaisedButton from 'material-ui/RaisedButton'
+// import Dialog from 'material-ui/Dialog'
+import {deepPurple500} from 'material-ui/styles/colors'
+// import FlatButton from 'material-ui/FlatButton'
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import AppBar from 'material-ui/AppBar'
 
-// import logo from './logo.svg';
-// import './App.css';
-
-const styles = {
-  container: {
-    textAlign: 'center',
-    paddingTop: 200,
-  },
-};
+import SideBar from './SideBar'
 
 const muiTheme = getMuiTheme({
   palette: {
+    primary1Color: deepPurple500,
     accent1Color: deepPurple500,
   },
-});
+})
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {open: false};
+  }
+
+  handleToggle = () => this.setState({open: !this.state.open});
+
+  render() {
+    return (
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <div>
+          <SideBar
+            open={this.state.open}
+            handleToggle={this.handleToggle}
+          />
+
+          <AppBar
+            title="Github Client"
+            iconClassNameRight="muidocs-icon-navigation-expand-more"
+            onLeftIconButtonTouchTap={(open) => this.handleToggle() }
+          />
+
+        </div>
+      </MuiThemeProvider>
+    )
+  }
+}
+
+export default App
+
+/*class App extends Component {
   constructor(props, context) {
     super(props, context);
 
@@ -79,4 +104,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App;*/
