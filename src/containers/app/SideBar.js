@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import AppBar from 'material-ui/AppBar'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
+import { Link } from 'react-router-dom'
 
 export default class SideBar extends Component {
   render() {
@@ -18,8 +19,8 @@ export default class SideBar extends Component {
             onLeftIconButtonTouchTap={(evt) => handleToggle() }
             onTitleTouchTap={(evt) => handleToggle() }
           />
-          <MenuItem onTouchTap={handleToggle}>Menu Item</MenuItem>
-          <MenuItem onTouchTap={handleToggle}>Menu Item 2</MenuItem>
+          <MenuItem onTouchTap={handleToggle}><Link to="/users">Users</Link></MenuItem>
+          <MenuItem onTouchTap={handleToggle}>Repositories</MenuItem>
         </Drawer>
       </div>
     )
