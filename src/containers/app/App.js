@@ -47,7 +47,7 @@ class App extends Component {
 
             <div className="container">
               <div className="row">
-                <div className="col-xs-12 col-sm-8">
+                <div className="col-xs-12">
                   <Route exact path="/" component={HomePage}/>
                   <Route path="/users" component={UsersPage}/>
                   <Route path="/repos" component={ReposPage}/>
