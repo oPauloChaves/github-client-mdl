@@ -12,6 +12,7 @@ import AppBar from 'material-ui/AppBar'
 import SideBar from './SideBar'
 import HomePage from '../Home'
 import UsersPage from '../Users'
+import ReposPage from '../Repositories'
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -49,6 +50,7 @@ class App extends Component {
                 <div className="col-xs-12 col-sm-8">
                   <Route exact path="/" component={HomePage}/>
                   <Route path="/users" component={UsersPage}/>
+                  <Route path="/repos" component={ReposPage}/>
                 </div>
               </div>
             </div>

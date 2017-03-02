@@ -20,7 +20,7 @@ export default class SideBar extends Component {
             onTitleTouchTap={(evt) => handleToggle() }
           />
           <MenuItem onTouchTap={handleToggle}><Link to="/users">Users</Link></MenuItem>
-          <MenuItem onTouchTap={handleToggle}>Repositories</MenuItem>
+          <MenuItem onTouchTap={handleToggle}><Link to="/repos">Repositories</Link></MenuItem>
         </Drawer>
       </div>
     )

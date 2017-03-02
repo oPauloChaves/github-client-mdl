@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const Users = () => (
-  <h2>
-    Users!
-  </h2>
-)
+const users = []
 
-export default Users
+export default class UsersPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {users};
+  }
+
+  render() {
+    return (
+      <h2>Users Page</h2>
+    )
+  }
+}
