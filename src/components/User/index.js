@@ -1,23 +1,14 @@
 import React, { PropTypes } from "react"
-import {Card, CardHeader, CardActions} from 'material-ui/Card'
-import FlatButton from 'material-ui/FlatButton';
 
 class User extends React.Component {
   render() {
-    const { login, avatar_url, type } = this.props.user
+    const { login, avatar_url } = this.props.user
 
     return (
-      <Card>
-        <CardHeader
-          title={login}
-          subtitle={type}
-          avatar={avatar_url}
-        />
-        <CardActions>
-          <FlatButton label="Action1" />
-          <FlatButton label="Action2" />
-        </CardActions>
-      </Card>
+      <div style={{border: '1px solid #ddd', width: '100%'}}>
+        <p>login: {login}</p>
+        <img src={avatar_url} style={{width: '30%', heigth: '30%'}} />
+      </div>
     )
 
   }
