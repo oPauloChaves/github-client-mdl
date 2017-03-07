@@ -7,7 +7,7 @@ class User extends React.Component {
     return (
       <div style={{border: '1px solid #ddd', width: '100%'}}>
         <p>login: {login}</p>
-        <img src={avatar_url} style={{width: '30%', heigth: '30%'}} />
+        <img src={avatar_url} role='presentation' style={{width: '30%', heigth: '30%'}} />
       </div>
     )
 
